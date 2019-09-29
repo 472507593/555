@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <style type="text/css">
+		 	#re{
+		 		width: 100px;
+		 		height: 100px;
+		 		background: red;
+		 	}
+		 </style>
+		<script type="text/javascript">
+			window.onload =function(){
+				
+				var re = document.getElementById("re");
+				var an = document.getElementById("an");
+				an.onclick = function(){
+					
+				timer = setInterval(function(){
+						var n1 =Math.floor( Math.random()*256);
+						var n2 =Math.floor( Math.random()*256);
+						var n3 =Math.floor( Math.random()*256);
+						re.style.background = "rgb("+n1+","+n2+","+n3+")";
+					},100)
+					}
+				btn2.onclick = function(){
+					clearInterval(timer);
+				}
+				}
+		</script>
+	</head>
+	<body>
+		<div id="re">
+			
+		</div>
+		<button id="an">改变颜色</button>
+		<button id="btn2">ting</button>
+	</body>
+</html>
